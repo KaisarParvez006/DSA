@@ -1,0 +1,510 @@
+Parvez, I think I know exactly where you're getting stuck.
+
+You're **not confused about Trees**.
+
+You're confused because **you don't know what each Java object is holding in memory**.
+
+For example, when you see this:
+
+```java
+Queue<Pair> q = new LinkedList<>();
+
+TreeMap<Integer, ArrayList<Point>> map = new TreeMap<>();
+```
+
+your brain probably says:
+
+> "What is Pair? What is Point? What is TreeMap? What is inside Queue? Where are these values stored?"
+
+That's the real problem.
+
+---
+
+# I want to teach you differently.
+
+**Forget LeetCode 987.**
+
+Forget Vertical Traversal.
+
+Let's start from **zero**.
+
+I will build everything step by step.
+
+---
+
+# Step 1 — What is an Object?
+
+Suppose you have
+
+```java
+class Student {
+
+    String name;
+    int age;
+
+}
+```
+
+Now
+
+```java
+Student s = new Student();
+```
+
+Think of it as creating an empty box.
+
+```
+Student s
+
+┌───────────────┐
+│ name = null   │
+│ age  = 0      │
+└───────────────┘
+```
+
+Now
+
+```java
+s.name = "Parvez";
+s.age = 20;
+```
+
+Memory becomes
+
+```
+Student s
+
+┌────────────────┐
+│ name = Parvez  │
+│ age  = 20      │
+└────────────────┘
+```
+
+That's all an object is.
+
+Just a box storing variables.
+
+---
+
+# Step 2 — What is a TreeNode?
+
+Exactly the same.
+
+```java
+class TreeNode{
+
+    int val;
+
+    TreeNode left;
+
+    TreeNode right;
+
+}
+```
+
+One TreeNode is just
+
+```
+┌─────────────────────┐
+│ val = 27            │
+│ left = ?            │
+│ right = ?           │
+└─────────────────────┘
+```
+
+After creating children
+
+```
+          27
+```
+
+Memory
+
+```
+┌─────────────────────────────┐
+│ val = 27                    │
+│ left  ─────────────┐         │
+│ right ─────────┐   │         │
+└────────────────┘   │         │
+                     │         │
+                 Node14     Node35
+```
+
+Left and right **store references**, not numbers.
+
+---
+
+# Step 3 — What is Pair?
+
+Suppose I create
+
+```java
+class Pair{
+
+    TreeNode node;
+
+    int col;
+
+}
+```
+
+Question:
+
+Does Pair create a tree?
+
+No.
+
+It only stores TWO things.
+
+Example
+
+```
+Pair
+
+┌───────────────────┐
+│ node -> 27        │
+│ col  = 0          │
+└───────────────────┘
+```
+
+Another Pair
+
+```
+┌───────────────────┐
+│ node -> 14        │
+│ col  = -1         │
+└───────────────────┘
+```
+
+That's all.
+
+Pair is just another box.
+
+---
+
+# Step 4 — What is Queue<Pair>?
+
+Now
+
+```java
+Queue<Pair> q = new LinkedList<>();
+```
+
+Think of a queue as a line.
+
+Initially
+
+```
+Front
+
+Empty
+```
+
+Now
+
+```java
+q.offer(new Pair(root,0));
+```
+
+Queue
+
+```
+Front
+
+┌──────────────┐
+│ node=27      │
+│ col=0        │
+└──────────────┘
+```
+
+Add another
+
+```java
+q.offer(new Pair(node14,-1));
+```
+
+Queue
+
+```
+Front
+
+┌──────────────┐
+│27 ,0         │
+└──────────────┘
+
+┌──────────────┐
+│14 ,-1        │
+└──────────────┘
+```
+
+Nothing magical happened.
+
+Queue is just storing Pair objects.
+
+---
+
+# Step 5 — What does poll() do?
+
+Before
+
+```
+Queue
+
+27
+
+14
+
+35
+```
+
+Now
+
+```java
+Pair current = q.poll();
+```
+
+Queue becomes
+
+```
+14
+
+35
+```
+
+But
+
+```
+current
+
+┌─────────────┐
+│node=27      │
+│col=0        │
+└─────────────┘
+```
+
+Nothing is lost.
+
+It simply moved from Queue into `current`.
+
+---
+
+# Step 6 — current.node
+
+Now
+
+```java
+TreeNode node = current.node;
+```
+
+means
+
+Take
+
+```
+current
+
+┌────────────┐
+│27          │
+│0           │
+└────────────┘
+```
+
+Copy only
+
+```
+27
+```
+
+into
+
+```java
+node
+```
+
+---
+
+# Step 7 — current.col
+
+```java
+int col = current.col;
+```
+
+means
+
+Take
+
+```
+0
+```
+
+and store it.
+
+So now
+
+```
+node = 27
+
+col = 0
+```
+
+---
+
+# That's ALL Pair is doing.
+
+Nothing else.
+
+---
+
+# Why Point?
+
+Later we need
+
+```
+Row
+
++
+
+Value
+```
+
+Again
+
+```
+Point
+
+┌─────────────┐
+│ row=2       │
+│ value=31    │
+└─────────────┘
+```
+
+Another box.
+
+Nothing magical.
+
+---
+
+# Why TreeMap?
+
+Suppose
+
+```
+Column
+
+0
+```
+
+contains
+
+```
+27
+
+19
+
+31
+```
+
+TreeMap stores
+
+```
+0
+
+↓
+
+[27,19,31]
+```
+
+Another column
+
+```
+-1
+
+↓
+
+[14]
+```
+
+Another
+
+```
+2
+
+↓
+
+[42]
+```
+
+TreeMap is simply
+
+```
+Key
+
+↓
+
+Value
+```
+
+---
+
+# Now look again.
+
+Suddenly the scary code
+
+```java
+Queue<Pair>
+
+TreeMap<Integer,ArrayList<Point>>
+```
+
+becomes
+
+```
+Queue
+
+↓
+
+Stores small boxes
+
+(node,column)
+
+---------------------
+
+TreeMap
+
+↓
+
+Stores
+
+column
+
+↓
+
+list of
+
+(row,value)
+```
+
+That's it.
+
+Nothing more.
+
+---
+
+## I think we should completely restart Trees.
+
+Not because you can't learn them.
+
+Because you're trying to understand **algorithms** before you're comfortable with the **Java objects** they're built from.
+
+### Here's the order I'd teach you:
+
+1. **How Java stores TreeNodes in memory** (with diagrams).
+2. **How recursion moves through a tree** (call stack visuals).
+3. **How a Queue stores TreeNodes** (memory diagrams).
+4. **How Pair classes work** (just objects with two fields).
+5. **Level Order Traversal**.
+6. **Then** Vertical Traversal.
+
+I genuinely think this will make Trees "click" for you.
+
+From what I've seen over our conversations, you learn best when you can **see the memory and pointers visually**, not by memorizing code. So from here on, I'd explain every tree algorithm with diagrams of what each variable (`root`, `node`, `current`, `q`, `map`) contains at every step, instead of jumping straight to the code. I think that approach will make the advanced tree questions much easier to understand.
