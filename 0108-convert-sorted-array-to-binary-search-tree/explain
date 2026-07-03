@@ -1,0 +1,383 @@
+Parvez, **you already understand the algorithm.**
+
+The problem is **not recursion**.
+
+The problem is **you don't know how to convert your thinking into code.**
+
+Let's do exactly that.
+
+---
+
+# Your Thinking
+
+You said:
+
+```text
+Root = 4
+
+Left = 1,2,3
+      Root = 2
+      Left = 1
+      Right = 3
+
+Right = 5,6,7
+       Root = 6
+       Left = 5
+       Right = 7
+```
+
+✅ This is **100% correct**.
+
+Now let's convert **one thought into one line of code**.
+
+---
+
+# Step 1
+
+Array
+
+```text
+[1 2 3 4 5 6 7]
+
+ l         r
+
+0         6
+```
+
+Middle
+
+```java
+int mid = (left + right) / 2;
+```
+
+So
+
+```text
+mid = 3
+```
+
+Value
+
+```text
+4
+```
+
+---
+
+# Step 2
+
+You said
+
+> Root is 4
+
+How do we create a node?
+
+Already learned.
+
+```java
+TreeNode root = new TreeNode(nums[mid]);
+```
+
+Now memory becomes
+
+```text
+        root
+
+         ↓
+
+        4
+```
+
+That's all.
+
+---
+
+# Step 3
+
+Now your brain says
+
+> Left should be
+
+```text
+1 2 3
+```
+
+Question.
+
+Do we write a for loop?
+
+No.
+
+Instead we ask
+
+> "Can another function build this tree for me?"
+
+Exactly like
+
+```text
+Teacher
+
+↓
+
+Student
+
+↓
+
+Teacher
+
+↓
+
+Student
+```
+
+The function calls itself.
+
+So write
+
+```java
+root.left = helper(nums, left, mid - 1);
+```
+
+Read it in English.
+
+> Build my left subtree using everything before the middle.
+
+---
+
+# Step 4
+
+Now
+
+```text
+5 6 7
+```
+
+Same idea.
+
+```java
+root.right = helper(nums, mid + 1, right);
+```
+
+Read it.
+
+> Build my right subtree using everything after the middle.
+
+---
+
+# Step 5
+
+Now return
+
+```java
+return root;
+```
+
+Why?
+
+Because the function created
+
+```text
+        4
+```
+
+So it returns
+
+```text
+root
+
+↓
+
+4
+```
+
+---
+
+# That's literally the whole algorithm
+
+```java
+TreeNode root = new TreeNode(nums[mid]);
+
+root.left = helper(...);
+
+root.right = helper(...);
+
+return root;
+```
+
+Nothing else.
+
+---
+
+# But where does helper() come from?
+
+This is the part beginners struggle with.
+
+We write another function.
+
+```java
+TreeNode helper(int[] nums, int left, int right)
+```
+
+This function says
+
+> "Give me any part of the array.
+
+I'll build a BST from that part."
+
+---
+
+# Example
+
+Suppose
+
+```java
+helper(nums,0,6)
+```
+
+means
+
+```text
+[1 2 3 4 5 6 7]
+```
+
+It returns
+
+```text
+        4
+```
+
+---
+
+Now
+
+```java
+helper(nums,0,2)
+```
+
+means
+
+```text
+1 2 3
+```
+
+It returns
+
+```text
+    2
+   / \
+  1   3
+```
+
+---
+
+Now
+
+```java
+helper(nums,4,6)
+```
+
+means
+
+```text
+5 6 7
+```
+
+Returns
+
+```text
+    6
+   / \
+  5   7
+```
+
+Notice something?
+
+The same function works for **every subarray**.
+
+That's why recursion is perfect here.
+
+---
+
+# The Base Case (Most Important)
+
+Eventually the function reaches
+
+```java
+helper(nums,0,-1)
+```
+
+Question:
+
+Is there any element?
+
+No.
+
+So return
+
+```java
+null;
+```
+
+That becomes
+
+```text
+1
+
+/
+
+null
+```
+
+which is exactly what a leaf node should have.
+
+So the first line of `helper` is always:
+
+```java
+if (left > right)
+    return null;
+```
+
+Read it as:
+
+> "If there are no elements left in this part of the array, there is no node to create."
+
+---
+
+# Now look at the whole function
+
+```java
+TreeNode helper(int[] nums, int left, int right) {
+
+    // No elements left
+    if (left > right)
+        return null;
+
+    // Find middle
+    int mid = (left + right) / 2;
+
+    // Create root
+    TreeNode root = new TreeNode(nums[mid]);
+
+    // Build left subtree
+    root.left = helper(nums, left, mid - 1);
+
+    // Build right subtree
+    root.right = helper(nums, mid + 1, right);
+
+    // Return current root
+    return root;
+}
+```
+
+---
+
+# Finally, LeetCode calls
+
+```java
+public TreeNode sortedArrayToBST(int[] nums) {
+
+    return helper(nums, 0, nums.length - 1);
+
+}
+```
+
