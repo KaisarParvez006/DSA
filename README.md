@@ -7,6 +7,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/KaisarParvez006/DSA/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
 | [0106-construct-binary-tree-from-inorder-and-postorder-traversal](https://github.com/KaisarParvez006/DSA/tree/master/0106-construct-binary-tree-from-inorder-and-postorder-traversal) |
 | [0108-convert-sorted-array-to-binary-search-tree](https://github.com/KaisarParvez006/DSA/tree/master/0108-convert-sorted-array-to-binary-search-tree) |
+| [0134-gas-station](https://github.com/KaisarParvez006/DSA/tree/master/0134-gas-station) |
 ## Divide and Conquer
 |  |
 | ------- |
@@ -49,4 +50,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/KaisarParvez006/DSA/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
 | [0106-construct-binary-tree-from-inorder-and-postorder-traversal](https://github.com/KaisarParvez006/DSA/tree/master/0106-construct-binary-tree-from-inorder-and-postorder-traversal) |
+## Greedy
+|  |
+| ------- |
+| [0134-gas-station](https://github.com/KaisarParvez006/DSA/tree/master/0134-gas-station) |
 <!---LeetCode Topics End-->
