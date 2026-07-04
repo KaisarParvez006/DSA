@@ -1,4 +1,4 @@
-//check notes
+//check placement notes
 
 class Solution {
     public int canCompleteCircuit(int[] gas, int[] cost) {
