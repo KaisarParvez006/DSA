@@ -54,4 +54,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0134-gas-station](https://github.com/KaisarParvez006/DSA/tree/master/0134-gas-station) |
+## Math
+|  |
+| ------- |
+| [0007-reverse-integer](https://github.com/KaisarParvez006/DSA/tree/master/0007-reverse-integer) |
 <!---LeetCode Topics End-->
