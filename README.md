@@ -75,6 +75,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0322-coin-change](https://github.com/KaisarParvez006/DSA/tree/master/0322-coin-change) |
 | [0509-fibonacci-number](https://github.com/KaisarParvez006/DSA/tree/master/0509-fibonacci-number) |
 | [0746-min-cost-climbing-stairs](https://github.com/KaisarParvez006/DSA/tree/master/0746-min-cost-climbing-stairs) |
+| [1143-longest-common-subsequence](https://github.com/KaisarParvez006/DSA/tree/master/1143-longest-common-subsequence) |
 ## Recursion
 |  |
 | ------- |
@@ -88,4 +89,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0322-coin-change](https://github.com/KaisarParvez006/DSA/tree/master/0322-coin-change) |
+## String
+|  |
+| ------- |
+| [1143-longest-common-subsequence](https://github.com/KaisarParvez006/DSA/tree/master/1143-longest-common-subsequence) |
 <!---LeetCode Topics End-->
