@@ -9,6 +9,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0108-convert-sorted-array-to-binary-search-tree](https://github.com/KaisarParvez006/DSA/tree/master/0108-convert-sorted-array-to-binary-search-tree) |
 | [0134-gas-station](https://github.com/KaisarParvez006/DSA/tree/master/0134-gas-station) |
 | [0300-longest-increasing-subsequence](https://github.com/KaisarParvez006/DSA/tree/master/0300-longest-increasing-subsequence) |
+| [0322-coin-change](https://github.com/KaisarParvez006/DSA/tree/master/0322-coin-change) |
 ## Divide and Conquer
 |  |
 | ------- |
@@ -67,6 +68,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0070-climbing-stairs](https://github.com/KaisarParvez006/DSA/tree/master/0070-climbing-stairs) |
 | [0300-longest-increasing-subsequence](https://github.com/KaisarParvez006/DSA/tree/master/0300-longest-increasing-subsequence) |
+| [0322-coin-change](https://github.com/KaisarParvez006/DSA/tree/master/0322-coin-change) |
 | [0509-fibonacci-number](https://github.com/KaisarParvez006/DSA/tree/master/0509-fibonacci-number) |
 ## Recursion
 |  |
@@ -77,4 +79,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0070-climbing-stairs](https://github.com/KaisarParvez006/DSA/tree/master/0070-climbing-stairs) |
 | [0509-fibonacci-number](https://github.com/KaisarParvez006/DSA/tree/master/0509-fibonacci-number) |
+## Breadth-First Search
+|  |
+| ------- |
+| [0322-coin-change](https://github.com/KaisarParvez006/DSA/tree/master/0322-coin-change) |
 <!---LeetCode Topics End-->
