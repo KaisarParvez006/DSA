@@ -10,6 +10,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0134-gas-station](https://github.com/KaisarParvez006/DSA/tree/master/0134-gas-station) |
 | [0300-longest-increasing-subsequence](https://github.com/KaisarParvez006/DSA/tree/master/0300-longest-increasing-subsequence) |
 | [0322-coin-change](https://github.com/KaisarParvez006/DSA/tree/master/0322-coin-change) |
+| [0746-min-cost-climbing-stairs](https://github.com/KaisarParvez006/DSA/tree/master/0746-min-cost-climbing-stairs) |
 ## Divide and Conquer
 |  |
 | ------- |
@@ -70,6 +71,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0300-longest-increasing-subsequence](https://github.com/KaisarParvez006/DSA/tree/master/0300-longest-increasing-subsequence) |
 | [0322-coin-change](https://github.com/KaisarParvez006/DSA/tree/master/0322-coin-change) |
 | [0509-fibonacci-number](https://github.com/KaisarParvez006/DSA/tree/master/0509-fibonacci-number) |
+| [0746-min-cost-climbing-stairs](https://github.com/KaisarParvez006/DSA/tree/master/0746-min-cost-climbing-stairs) |
 ## Recursion
 |  |
 | ------- |
