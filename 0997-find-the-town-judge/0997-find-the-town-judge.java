@@ -20,7 +20,7 @@ class Solution {
 
         for (int i = 1; i <= n; i++) {
 
-            if (inDegree[i] == n - 1 && outDegree[i] == 0) 
+            if (inDegree[i] == n - 1 && outDegree[i] == 0)  //checking all persons . judge condi :-  Incoming = n-1 & Outgoing = 0
                 return i;
         }
         return -1;
