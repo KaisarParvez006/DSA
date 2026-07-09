@@ -12,6 +12,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0300-longest-increasing-subsequence](https://github.com/KaisarParvez006/DSA/tree/master/0300-longest-increasing-subsequence) |
 | [0322-coin-change](https://github.com/KaisarParvez006/DSA/tree/master/0322-coin-change) |
 | [0746-min-cost-climbing-stairs](https://github.com/KaisarParvez006/DSA/tree/master/0746-min-cost-climbing-stairs) |
+| [0997-find-the-town-judge](https://github.com/KaisarParvez006/DSA/tree/master/0997-find-the-town-judge) |
 ## Divide and Conquer
 |  |
 | ------- |
@@ -55,6 +56,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/KaisarParvez006/DSA/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
 | [0106-construct-binary-tree-from-inorder-and-postorder-traversal](https://github.com/KaisarParvez006/DSA/tree/master/0106-construct-binary-tree-from-inorder-and-postorder-traversal) |
+| [0997-find-the-town-judge](https://github.com/KaisarParvez006/DSA/tree/master/0997-find-the-town-judge) |
 ## Greedy
 |  |
 | ------- |
@@ -93,4 +95,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [1143-longest-common-subsequence](https://github.com/KaisarParvez006/DSA/tree/master/1143-longest-common-subsequence) |
+## Graph Theory
+|  |
+| ------- |
+| [0997-find-the-town-judge](https://github.com/KaisarParvez006/DSA/tree/master/0997-find-the-town-judge) |
 <!---LeetCode Topics End-->
