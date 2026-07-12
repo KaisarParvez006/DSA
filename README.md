@@ -4,6 +4,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Array
 |  |
 | ------- |
+| [0051-n-queens](https://github.com/KaisarParvez006/DSA/tree/master/0051-n-queens) |
 | [0055-jump-game](https://github.com/KaisarParvez006/DSA/tree/master/0055-jump-game) |
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/KaisarParvez006/DSA/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
 | [0106-construct-binary-tree-from-inorder-and-postorder-traversal](https://github.com/KaisarParvez006/DSA/tree/master/0106-construct-binary-tree-from-inorder-and-postorder-traversal) |
@@ -107,4 +108,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0125-valid-palindrome](https://github.com/KaisarParvez006/DSA/tree/master/0125-valid-palindrome) |
 | [0189-rotate-array](https://github.com/KaisarParvez006/DSA/tree/master/0189-rotate-array) |
+## Backtracking
+|  |
+| ------- |
+| [0051-n-queens](https://github.com/KaisarParvez006/DSA/tree/master/0051-n-queens) |
 <!---LeetCode Topics End-->
