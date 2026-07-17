@@ -15,6 +15,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0322-coin-change](https://github.com/KaisarParvez006/DSA/tree/master/0322-coin-change) |
 | [0746-min-cost-climbing-stairs](https://github.com/KaisarParvez006/DSA/tree/master/0746-min-cost-climbing-stairs) |
 | [0997-find-the-town-judge](https://github.com/KaisarParvez006/DSA/tree/master/0997-find-the-town-judge) |
+| [1979-find-greatest-common-divisor-of-array](https://github.com/KaisarParvez006/DSA/tree/master/1979-find-greatest-common-divisor-of-array) |
 ## Divide and Conquer
 |  |
 | ------- |
@@ -71,6 +72,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0070-climbing-stairs](https://github.com/KaisarParvez006/DSA/tree/master/0070-climbing-stairs) |
 | [0189-rotate-array](https://github.com/KaisarParvez006/DSA/tree/master/0189-rotate-array) |
 | [0509-fibonacci-number](https://github.com/KaisarParvez006/DSA/tree/master/0509-fibonacci-number) |
+| [1979-find-greatest-common-divisor-of-array](https://github.com/KaisarParvez006/DSA/tree/master/1979-find-greatest-common-divisor-of-array) |
 ## Dynamic Programming
 |  |
 | ------- |
@@ -112,4 +114,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0051-n-queens](https://github.com/KaisarParvez006/DSA/tree/master/0051-n-queens) |
+## Number Theory
+|  |
+| ------- |
+| [1979-find-greatest-common-divisor-of-array](https://github.com/KaisarParvez006/DSA/tree/master/1979-find-greatest-common-divisor-of-array) |
 <!---LeetCode Topics End-->
